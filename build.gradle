@@ -27,6 +27,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5'
+    // 스프링 부트 3.0 이상: Hibernate5JakartaModule 등록
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5-jakarta'
 
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
