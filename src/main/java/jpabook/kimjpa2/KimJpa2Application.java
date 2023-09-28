@@ -14,7 +14,7 @@ public class KimJpa2Application {
 
     @Bean
     Hibernate5JakartaModule hibernate5JakartaModule() {
-        // 기본적으로 초기화 된 프록시 객체만 노출
+        // 레이지로딩을 호출해서 기본적으로 초기화 된 프록시 객체만 노출(데이터가 로딩이 된 것들만 api 로 반환됨)
         Hibernate5JakartaModule hibernate5JakartaModule = new Hibernate5JakartaModule();
         // V1. 강제 지연 로딩 설정
         // hibernate5JakartaModule.configure(Hibernate5JakartaModule.Feature.FORCE_LAZY_LOADING, true);
