@@ -9,6 +9,7 @@ import jpabook.kimjpa2.domain.Order;
 import jpabook.kimjpa2.domain.OrderItem;
 import jpabook.kimjpa2.domain.OrderStatus;
 import jpabook.kimjpa2.repository.OrderRepository;
+import jpabook.kimjpa2.repository.order.query.OrderQueryDto;
 import jpabook.kimjpa2.repository.order.query.OrderQueryRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -88,6 +89,11 @@ public class OrderApiController {
                 .collect(toList());
 
         return result;
+    }
+
+    @GetMapping("/api/v4/orders")
+    public List<OrderQueryDto> ordersV4() {
+        return orderQueryRepository.findOrderQueryDtos();
     }
 
     @Data
