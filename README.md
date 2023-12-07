@@ -1,15 +1,7 @@
-# 스프링 부트와 JPA 활용2
+# 실전! 스프링 부트와 JPA 활용2 - API 개발과 성능 최적화
 
-> **정리**
-> 
-> 
-> 엔티티를 DTO로 변환하거나, DTO로 바로 조회하는 두가지 방법은 각각 장단점이 있다. 둘중 상황에 따라
-> 서 더 나은 방법을 선택하면 된다. 엔티티로 조회하면 리포지토리 재사용성도 좋고, 개발도 단순해진다. 따라
-> 서 권장하는 방법은 다음과 같다.
-> 
-> **쿼리 방식 선택 권장 순서**
-> 
-> 1. 우선 엔티티를 DTO로 변환하는 방법을 선택한다.(유지보수성이 좋음)
-> 2. 필요하면 페치 조인으로 성능을 최적화 한다. 대부분의 성능 이슈가 해결된다.(95%이상 해결됨)(v2,v3)
-> 3. 그래도 안되면 DTO로 직접 조회하는 방법을 사용한다.(v4)
-> 4. 최후의 방법은 JPA가 제공하는 네이티브 SQL이나 스프링 JDBC Template을 사용해서 SQL을 직접 사용한다.(*OrderSimpleQueryRepository* 에서 EntityManager 가 아니라 직접 데이터베이스 커넥션을 받아서, 스프링의 JDBC 템플릿을 직접 써서 API에 최적화된 코드를 제공)
+<img src="https://github.com/hyewon218/kim-jpa2/assets/126750615/b3f7dbbf-8b16-4835-ac6a-05f2418bf5fa" width="60%"/><br>
+
+1. [API 개발 고급 - 지연 로딩과 조회 성능 최적화](https://github.com/hyewon218/kim-jpa2/blob/master/docs/01.md)
+2. [API 개발 고급 - 컬렉션 조회 최적화](https://github.com/hyewon218/kim-jpa2/blob/master/docs/02.md)
+3. [API 개발 고급 - 실무 필수 최적화](https://github.com/hyewon218/kim-jpa2/blob/master/docs/03.md)
